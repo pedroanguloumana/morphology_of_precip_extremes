@@ -5,7 +5,7 @@
 # is disjoint from other regions. 
 ####################
 
-REGIONS = {
+GPM_REGIONS = {
     "AFC": {
         "long_name": "Africa",
         "lat_south": -40,
@@ -114,5 +114,33 @@ REGIONS = {
 }
 
 def get_gpm_region_dict(region_key):
-    r = REGIONS[region_key]
+    r = GPM_REGIONS[region_key]
+    return r
+
+GSAM_REGIONS = {
+    "EqIO": {
+        "long_name": "Equatorial Indian Ocean",
+        "lat_south": -10,
+        "lat_north": 5,
+        "lon_west": 60, 
+        "lon_east": 90,
+    },
+    "AtlITCZ": {
+        "long_name": "Atlantic ITCZ",
+        "lat_south": -5,
+        "lat_north": 5,
+        "lon_west": -35,
+        "lon_east": -10,
+    },
+    "PacITCZ": {
+        "long_name": "Pacific ITCZ",
+        "lat_south": -3,
+        "lat_north": 7,
+        "lon_west": -115,
+        "lon_east": -85,
+    }
+}
+
+def get_gsam_region_dict(region_key):
+    r = GSAM_REGIONS[region_key]
     return r
